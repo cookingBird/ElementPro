@@ -2,10 +2,8 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
-	mode: 'production',
 	devtool: 'source-map',
 	entry: {
 		ElementUiPro: path.resolve(__dirname, './src/index.js')
@@ -17,12 +15,8 @@ module.exports = {
 		},
 		fallback: {},
 	},
-	optimization: {
-		minimize: true,
-		minimizer: [
-			`...`,
-			new CssMinimizerPlugin(),
-		],
+	experiments: {
+		outputModule: true,
 	},
 	plugins: [new VueLoaderPlugin(), new CleanWebpackPlugin()],
 	module: {

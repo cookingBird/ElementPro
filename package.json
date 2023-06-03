@@ -2,8 +2,9 @@
   "name": "element-ui-pro",
   "version": "1.0.0",
   "description": "element-ui perform for form",
-  "main": "lib/index.js",
+  "main": "lib/es/index.js",
   "scripts": {
+    "dev": "npx webpack --config webpack.config.dev.js",
     "build:umd": "npx webpack --config webpack.config.umd.js",
     "build:es": "npx webpack --config webpack.config.prod.js",
     "build": "npm run build:umd && npm run build:es"
