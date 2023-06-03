@@ -1,0 +1,30 @@
+{
+	"compilerOptions": {
+		"jsx": "preserve",
+		"target": "es5",
+		"module": "esnext",
+		"baseUrl": "./",
+		"moduleResolution": "node",
+		"paths": {
+			"@/*": [
+				"src/*"
+			]
+		},
+		"lib": [
+			"esnext",
+			"dom",
+			"dom.iterable",
+			"scripthost"
+		]
+	},
+	"vueCompilerOptions": {
+		"experimentalCompatMode": 2,
+		"target": 2
+	},
+	"exclude": [
+		"node_modules",
+		"dist",
+		"public",
+		"static"
+	],
+}
