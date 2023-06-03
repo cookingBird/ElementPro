@@ -1,8 +1,7 @@
 <template>
 <span v-bind="objectOmit(options,'slot')">
 	<!-- input -->
-	<!-- deprecate -->
-	<!-- <el-input-pro
+	<el-input-pro
 		v-if="options.slotIs === 'input'"
 		:model.sync="model"
 		:valueKey="options.valueKey || options.prop"
@@ -10,16 +9,7 @@
 		v-on="buildListeners(options)"
 		:class="options.class"
 		:style="options.style"
-	></el-input-pro> -->
-	<el-input
-		v-if="options.slotIs === 'input'"
-		:value="getCtxValueGetter(options.valueKey || options.prop,'')(model)"
-		@input="(val)=>getCtxValueSetter(model, options.valueKey || options.prop)(val)"
-		v-bind="objectPick(options, Object.keys(ElInput))"
-		v-on="buildListeners(options)"
-		:class="options.class"
-		:style="options.style"
-	></el-input>
+	></el-input-pro>
 	<!-- select -->
 	<el-select-pro
 		v-else-if="options.slotIs === 'select'"
